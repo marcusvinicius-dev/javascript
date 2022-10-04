@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: rgb(70, 165, 70);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="area" onclick="clicar()" onmouseenter="entrar()">
+        Interaja...
+    </div>
+
+    <script>
+        function clicar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Clicou!'
+        }
+
+        function entrar() {
+            var e = window.document.getElementById('entrar')
+            e.style.background = 'rgb(70, 165, 70)'
+        }
+    </script>
 </body>
 </html>
