@@ -5,19 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        #txtnacio{
+            height: 25px;
+            font-size: 15pt;
+        }
+        #button{
+            font-size: 15px;
+            height: 35px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Nacionalidade</h1>
-    Qual sua Nacionalidade? 
+    Qual seu País? 
     <input type="text" name="txtnacio" id="txtnacio">
-    <input type="button" value="Verificar" onclick="verificar()">
+    <input type="button" value="Verificar" id="button" onclick="verifica()">
+    <div id="res">
+
+    </div>
 
 
     <script>
-        function verificar() {
-            var nacio = window.document.getElementById('txtnacio')
-
-            nacio.innerHTML = `Legal! Voc `
+        function verifica() {
+            var txtnacio = window.document.getElementById('txtnacio')
+            var nacio = String(txtnacio.value)
+            var res = window.document.getElementById('res')
+            if(nacio.toUpperCase() == 'BRASIL'){
+                res.innerHTML = `Legal! Voce é um <strong>Brasileiro</strong>`
+            }
+            else {
+                res.innerHTML = `Legal! Voce é um <strong>Estrangeiro</strong>`
+            }
         }
     </script>
 
