@@ -11,6 +11,7 @@ var diaSem = agora.getDay()
 6 = Sábado
 */
 
+
 switch(diaSem){
     case 0: {
         console.log(`Domingo`)
@@ -38,6 +39,10 @@ switch(diaSem){
     }
     case 6: {
         console.log(`Sábado`)
+        break
+    }
+    default: {
+        console.log(`Dia inválido!`)
         break
     }
 }
