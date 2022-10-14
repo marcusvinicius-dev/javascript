@@ -26,6 +26,14 @@ div{
     padding: 15px;
 }
 
+#verifica{
+    padding: 5px 15px;
+}
+
+#img{
+    border-radius: 50%;
+}
+
 .secao-dados{
     padding: 20px;
 }
