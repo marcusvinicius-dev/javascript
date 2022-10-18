@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3E81D4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+header{
+    text-align: center;
+    margin: 20px;
+}
+section{
+    width: 600px;
+    min-height: 200px;
+    padding: 20px;
+    margin: auto;
+    background-color: #ffffff;
+    font-size: 1.5em;
+    color: #000000;
+    border-radius: 10px;
+
+}
+
+#Bcontar{
+    padding: 5px 20px;
+    
+}
+
+footer{
+    margin: 10px;
+    text-align: center;
+    font-style: italic;
+}
