@@ -3,7 +3,7 @@ function contar(){
     var fim = window.document.getElementById('txtFim')
     var pas = window.document.getElementById('txtPasso')
     var res = window.document.getElementById('txtRes')
-    var i = 0
+    var c = 0
     
     
     if(Number(ini.value <= 0)){
@@ -21,8 +21,10 @@ function contar(){
 
     res.innerHTML = `Contando: `
 
-    for (i = 1; i <= 5; i++){
-        res.innerHTML += `${i}`
-    }
+    while (c <= fim.value){
+        res.innerHTML += `${ini.value}`
+        Number(ini) = ini.value + pas.value
+        c = c + pas.value
+   }
 
     }
