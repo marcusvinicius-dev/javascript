@@ -36,11 +36,12 @@
             var nacio = String(txtnacio.value)
             var res = window.document.getElementById('res')
             if(nacio.toUpperCase() == 'BRASIL'){
-                res.innerHTML = `Legal! Voce é um <strong>Brasileiro</strong>`
+                res.innerHTML = `<p>Legal! Voce é um <strong>Brasileiro</strong></p>`
             }
             else {
-                res.innerHTML = `Legal! Voce é um <strong>Estrangeiro</strong>`
+                res.innerHTML = `<p>Legal! Voce é ddum <strong>Estrangeiro</strong></p>`
             }
+            res.innerHTML += `<p>Seja bem vindo!</p>`
         }
     </script>
 

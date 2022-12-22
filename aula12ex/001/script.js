@@ -1,6 +1,7 @@
 function carregar(){
     var agora = new Date()
     var hora = agora.getHours()
+    var hora = 20
     var txthora = window.document.getElementById('Thora')
     var imag = window.document.getElementById('imagem')
 

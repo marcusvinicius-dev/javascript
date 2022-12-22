@@ -7,6 +7,6 @@ if (hora < 5) {
     console.log(`Bom dia!`)
 }else if (hora <= 18){
     console.log(`Boa Tarde!`)
-}else if (hora <= 23){
+}else {
     console.log(`Boa Noite!`)
 }
