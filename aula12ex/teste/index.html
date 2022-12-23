@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio JS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #5c5b5b28;
+        }
+        .container{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            border: 0;
+            --display: flex;
+            --flex-direction: row;
+            --justify-content: center;
+            --align-items: center;
+            font-size: 50px;
+            
+            
+        }
+        #rel{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -45px 0 0 -80px;
+        
+        }
+
+
+        .spinner{
+            --display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -150px 0 0 -150px;
+            width: 300px;
+            height: 300px;
+            border: 6px solid rgba(255, 0, 0, 0.151);
+            border-left-color: red;
+            border-radius: 50%;
+            animation: spin 20s linear infinite;
+}
+
+@keyframes spin{
+    to {
+        transform: rotate(360deg);
+    }
+}
+       
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <div id="rel"></div>
+        
+    </div>
+
+
+    <script>
+        function relogio(){
+            //var rep = window.document.getElementById("rel")
+            var agora = new Date();
+            var hora = agora.getHours();
+            var mint = agora.getMinutes();
+            var seg = agora.getSeconds();
+            
+            if (hora < 10){
+                hora = "0"+ hora;
+            }
+            if (mint < 10){
+                hora = "0"+ mint;
+            }
+            if (seg < 10){
+                seg = "0"+ seg;
+            }
+            
+            var horas = hora + ":" + mint + ":" + seg;
+            var rep = window.document.getElementById("rel");
+            rep.value = horas;
+
+            rep.style.color = 'red';
+            rep.innerHTML = `${horas}`;   
+               
+        }
+        var timer = setInterval(relogio,1000);
+        
+
+    </script>
+</body>
+</html>
