@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon_verde.ico" type="image/x-icon">
+    <title>Status - ARCUSMOB</title>
+</head>
+<body onload="status()">
+    <div>
+        <p class="status">Carregando...</p>
+    </div>
+
+
+    <script>
+        
+       function status(){
+
+        
+
+        //Recebendo Dados do Servidor
+        const xmlHttp = new XMLHttpRequest();
+        //xmlHttp.open("GET", "http://mundolivre.dyndns.info:8085/api/v5/lic_tipo/tipo/lista", false);
+        xmlHttp.open("GET", "http://mundolivre.dyndns.info:8080/mlweb/Parametro/34/38510210000100", true);
+        //xmlHttp.setRequestHeader("tenant", "arcuslic_03683003000165");
+        xmlHttp.send();
+        //buscaTipo = (JSON.parse(xmlHttp.responseText))['resultSelects']['tipo'];
+
+        
+        }
+     
+    </script>
+</body>
+</html>
